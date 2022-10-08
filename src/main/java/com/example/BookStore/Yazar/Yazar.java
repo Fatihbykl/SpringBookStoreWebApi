@@ -25,4 +25,24 @@ public class Yazar {
 	public void kitapEkle(Kitap kitap) {
 		kitaplar.add(kitap);
 	}
+
+	// getters and setters
+	
+	public String getYazarAd() {
+		return yazarAd;
+	}
+
+	public void setYazarAd(String yazarAd) {
+		this.yazarAd = yazarAd;
+	}
+
+	public String getYazarID() {
+		return yazarID;
+	}
+
+	public Set<Kitap> getKitaplar() {
+		return kitaplar;
+	}
+	
+	
 }

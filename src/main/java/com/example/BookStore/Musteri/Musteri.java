@@ -10,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.example.BookStore.Adres.Adres;
 import com.example.BookStore.Siparis.Siparis;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,11 +22,12 @@ public class Musteri {
 	private String musteriID;
 	private String musteriAd;
 	private String musteriSoyad;
+	@JsonIgnore
 	private String musteriSifre;
 	private String musteriEmail;
 	private String rol;
 	
-	
+	@JsonIgnore
 	@OneToMany(mappedBy = "musteri")
 	private Set<Siparis> siparisler = new HashSet<>();
 	
@@ -41,6 +43,7 @@ public class Musteri {
 	}
 	
 	// getters and setters
+	
 	public String getMusteriAd() {
 		return musteriAd;
 	}
